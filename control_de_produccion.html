@@ -41,21 +41,80 @@
       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
           <a class="btn btn-primary" role="button" data-toggle="collapse" href="#primerboton" aria-expanded="false" aria-controls="primerboton">
-            Datos del cliente
+            Datos del cliente y vehículo
           </a>
-            <!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#menu2" aria-expanded="false" aria-controls="collapseExample" style="float: right;margin-right: 20px;">
+          <!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#menu2" aria-expanded="false" aria-controls="collapseExample" style="float: right;margin-right: 20px;">
                     Button with data-target
                 </button>-->
-          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#segundoboton" aria-expanded="false" aria-controls="segundoboton" style="float: right;">
+          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#segundoboton" aria-expanded="false" aria-controls="segundoboton"
+            style="float: right;">
               Datos del vehículo
           </a>
           <div class="collapse" id="primerboton">
-            <div class="well" style="float: left;width: 45%;">
-              hola mucho gusto como estas
+            <div class="well" style="float: left;width: 80%;">
+              <div class="row">
+
+                <div class="col-lg-12 well">
+                  <div class="row">
+
+                    <form (ngSubmit)="actualizar()" #empresaForm="ngForm" *ngIf="empresa">
+                      <div class="col-sm-12">
+                        <div class="row">
+                          <div class="col-sm-3 form-group">
+                            <label for="ruc">Nombre del cliente:</label>
+                            <input type="text" name="ruc"  required [(ngModel)]="empresa.ruc" #ruc="ngModel" class="form-control">
+                          </div>
+                          <div class="col-sm-3 form-group">
+                            <label for="nombre">DNI</label>
+                            <input type="text" name="nombre" required [(ngModel)]="empresa.nombre" class="form-control"
+                              #nombre>
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="direccion">Datos del carro</label>
+                            <input type="text" name="direccion"  required [(ngModel)]="empresa.direccion"
+                              class="form-control">
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="celular">Placa</label>
+                            <input type="text" name="celular"  required [(ngModel)]="empresa.celular"
+                              class="form-control">
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="celular">Mátricula</label>
+                            <input type="text" name="celular"  required [(ngModel)]="empresa.celular"
+                              class="form-control">
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="celular">Sección</label>
+                            <input type="text" name="celular"  required [(ngModel)]="empresa.celular"
+                              class="form-control">
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="celular">Color del carro</label>
+                            <input type="text" name="celular"  required [(ngModel)]="empresa.celular"
+                              class="form-control">
+                          </div>
+
+                          <div class="col-sm-3 form-group">
+                            <label for="celular">Año del carro</label>
+                            <input type="text" name="celular"  required [(ngModel)]="empresa.celular"
+                              class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="collapse" id="segundoboton">
-            <div class="well" style="width: 45%;float: right;">
+            <div class="well" style="width: 10%;float: right;">
               estas en el menu dos
             </div>
           </div>
