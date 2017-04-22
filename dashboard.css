@@ -11,6 +11,29 @@ body {
   padding-top: 10px;
 }
 
+table {
+border-spacing: 0;
+color:black;
+background-color:white;
+border: 1px solid rgb(235, 237, 240);
+border-radius: 8px;
+-moz-border-radius: 5px;
+padding: 5px;
+font-family:sans-serif;
+}
+
+.mytable{
+background-color:#ffffff;
+
+table-layout: fixed;
+}
+
+th{
+    padding: 3px !important;
+    text-align: center;
+    font-weight: normal;
+}
+
 /*
  * Global add-ons
  */
