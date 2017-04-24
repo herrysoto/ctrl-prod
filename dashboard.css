@@ -10,6 +10,15 @@
 body {
   padding-top: 10px;
 }
+.nav-tecnicos{
+    min-height: 0px;
+    height: 25px;
+}
+
+.cabecera-tabla-tecnico{
+    padding: 2px !important;
+    text-align: center;
+}
 
 table {
 border-spacing: 0;
