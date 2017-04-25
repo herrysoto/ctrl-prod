@@ -24,6 +24,24 @@
       width: 768px;
       }
       }
+
+      .tabla-izquierda{
+        width:30%
+      }
+      @media only screen and (max-width: 780px){
+        .tabla-izquierda{
+          width:35%
+        }
+      }
+
+      .tabla-derecha{
+        width: 69%;
+      }
+      @media only screen and (max-width: 780px){
+        .tabla-derecha{
+          width: 64%;
+        }
+      }
 </style>
 
 </head>
@@ -44,7 +62,7 @@
     <div class="panel panel-default content" role="button" href="#collapseOne" style="margin: auto;">
       <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             <span class="glyphicon glyphicon-chevron-down"></span>
             Acciones y Consultas
           </a>
@@ -135,11 +153,11 @@
   </div>
 
   <!--segundo panel con la grilla-->
-  <div class="panel-group" id="idcerrarpanel" role="tablist" aria-multiselectable="true" style="width: 100%;">
+  <div class="panel-group" id="idcerrarpanel" role="tablist" aria-multiselectable="false" style="width: 100%;">
     <div class="panel panel-default content" style=" margin: auto;">
       <div class="panel-heading" role="tab" id="headingOne" style="height: 60px;">
         <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#idcerrarpanel" href="#abrirordendeservicio" aria-expanded="true" aria-controls="abrirordendeservicio" style="margin-right: 20px;">
+          <a role="button" data-toggle="collapse" data-parent="#idcerrarpanel" href="#abrirordendeservicio" aria-expanded="false" aria-controls="abrirordendeservicio" style="margin-right: 20px;">
             <span class="glyphicon glyphicon-chevron-down"></span>
             Ordenes de servicio
           </a>
@@ -238,64 +256,274 @@
 
   <!--tabla de técnicos-->
   <div class="table-responsive content" >
-    <table class="table table-bordered" style="width:30%;">
-      <thead>
-        <tr>
-          <td class="cabecera-tabla-tecnico" colspan="3" style="color: #fff;background-color: rgba(1, 1, 1, 0.8);border-color: #adadad;">Vehículo con</td>
-        </tr>
-        <tr>
-          <td class="cabecera-tabla-tecnico" colspan="2" style="color: #fff;background-color: #c9302c;border-color: #ac2925;">Orden de Servicio</td>
-          <td class="cabecera-tabla-tecnico" style="background-color: #337ab7;border-color: #2e6da4;color: #fff;">Tareas</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align:center;">0</td>
-          <td style="text-align:center;">Por Asignar</td>
-          <td style="text-align:center;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">10</td>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;">Asignada</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">0</td>
-          <td style="text-align:center;">X Lavado 1</td>
-          <td style="text-align:center;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">1</td>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;">Espera Producción</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">6</td>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;">Producción</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">3</td>
-          <td style="text-align:center;"></td>
-          <td style="text-align:center;">Detenido</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">0</td>
-          <td style="text-align:center;">Por Validar</td>
-          <td style="text-align:center;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">0</td>
-          <td style="text-align:center;">C.Calidad</td>
-          <td style="text-align:center;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">0</td>
-          <td style="text-align:center;">X Lavado 2</td>
-          <td style="text-align:center;"></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="tabla-izquierda" style="display: inline-block;margin-bottom: 13px;">
+      <table class="table table-bordered" style="width:100%;">
+        <thead>
+          <tr>
+            <td class="cabecera-tabla-tecnico" colspan="3" style="color: #fff;background-color: rgba(1, 1, 1, 0.8);border-color: #adadad;">Vehículo con</td>
+          </tr>
+          <tr>
+            <td class="cabecera-tabla-tecnico" colspan="2" style="color: #fff;background-color: #c9302c;border-color: #ac2925;">Orden de Servicio</td>
+            <td class="cabecera-tabla-tecnico" style="background-color: #337ab7;border-color: #2e6da4;color: #fff;">Tareas</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">Por Asignar</td>
+            <td style="text-align:center;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">10</td>
+            <td style="text-align:center;"></td>
+            <td style="text-align:center;">Asignada</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">X Lavado 1</td>
+            <td style="text-align:center;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">1</td>
+            <td style="text-align:center;"></td>
+            <td style="text-align:center;">Espera Producción</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">6</td>
+            <td style="text-align:center;"></td>
+            <td style="text-align:center;">Producción</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;"></td>
+            <td style="text-align:center;">Detenido</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">Por Validar</td>
+            <td style="text-align:center;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">C.Calidad</td>
+            <td style="text-align:center;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">0</td>
+            <td style="text-align:center;">X Lavado 2</td>
+            <td style="text-align:center;"></td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+    <div class="tabla-derecha" style="overflow-x: scroll;display: inline-block;">
+      <table class="table table-bordered" style="width: 100%;margin-bottom: 16px;">
+        <thead>
+          <tr>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+            <th><a>hola<br>mucho</a></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+        </tbody>
+      </table>      
+    </div>
   </div>
 </div>
 
